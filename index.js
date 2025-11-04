@@ -18,6 +18,9 @@ if (!process.env.MONGO_URI) {
 
 // Routes
 app.use("/api/todos", todoRoutes);
+app.get("/", (req, res) => {  
+  res.send("Welcome to the Todo API");
+})
 
 // ✅ Connect to MongoDB
 mongoose
