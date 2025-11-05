@@ -21,8 +21,8 @@ if (!process.env.MONGO_URI) {
 }
 
 // Routes
-app.use("/api/todos", todoRoutes);
-app.get("/", (req, res) => {  
+app.use("/", todoRoutes);
+app.get("/test", (req, res) => {  
   res.send("Welcome to the Todo API");
 })
 
