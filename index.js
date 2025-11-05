@@ -7,7 +7,11 @@ const todoRoutes = require("./routes/todoroute");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "http://34.131.142.128",  // your frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 app.use(express.json());
 
 // ✅ Check if .env variables loaded properly
